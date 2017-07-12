@@ -1,0 +1,19 @@
+{
+  "name": "quotes-nodejs",
+  "version": "1.0.0",
+  "description": "User interface for quotes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yuntjs/quotes-nodejs.git"
+  },
+  "author": "yuntjs@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuntjs/quotes-nodejs/issues"
+  },
+  "homepage": "https://github.com/yuntjs/quotes-nodejs#readme"
+}
