@@ -14,8 +14,11 @@
 - name: Install body parser
   command: npm install body-parser --save
 
-- name: npm install mocha, should and sinon
-  command: npm install mocha should sinon --save
+- name: Install should and sinon
+  command: npm install should sinon --save
+
+- name: Install mocha
+  command: npm install mocha --save -g
 
 - name: npm install
   command: npm install
