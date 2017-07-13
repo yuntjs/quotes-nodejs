@@ -66,4 +66,4 @@ jobs:
           docker push taejunyun/quotesnodejs:$TAG
 
       - run: |
-          ./deploy.sh
+          ../deploy.sh
