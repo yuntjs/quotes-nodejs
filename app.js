@@ -1,10 +1,12 @@
 var express = require('express'),
     mongoose = require('mongoose'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    host;
 
 var promise = mongoose.connect('mongodb://mongo:27017/quotesAPI', {
   useMongoClient: true
 });
+
 promise.then(function(db){
 });
 

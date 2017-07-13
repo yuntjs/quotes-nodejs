@@ -8,6 +8,9 @@ var routes = function(Quote){
     .post(quoteController.post)
     .get(quoteController.get);
 
+  quoteRouter.route('/random')
+    .get(quoteController.random)
+
   quoteRouter.use('/:quoteId',function(req,res,next){
     Quote.findById(req.params.quoteId, function(err,quote){
       if(err)

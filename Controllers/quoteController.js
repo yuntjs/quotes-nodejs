@@ -26,9 +26,21 @@ var quoteController = function(Quote){
     });
   };
 
+  var random = function(req,res){
+    Quote.find(function(err,quotes){
+      if(err){
+        res.status(500).send(err);
+      } else {
+        var randomQ = quotes[Math.floor(Math.random()*quotes.length)];
+        res.json(randomQ);
+      }
+    });
+  };
+
   return {
     post: post,
-    get: get
+    get: get,
+    random: random
   }
 
 }
