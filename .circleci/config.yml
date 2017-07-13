@@ -24,6 +24,10 @@ jobs:
             ./bootstrap.sh
 
       # Download and cache dependencies
+      - run:
+          name: Test with mocha
+          command: mocha test
+
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -36,9 +40,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run:
-          name: Test with mocha
-          command: mocha test
 
       - setup_remote_docker   # (2)
 
