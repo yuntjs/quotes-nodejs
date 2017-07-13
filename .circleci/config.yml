@@ -45,8 +45,8 @@ jobs:
 
       # run tests!
       - run:
-        name: Test with mocha
-        command: mocha test
+          name: Test with mocha
+          command: mocha test
 
       - setup_remote_docker   # (2)
 
