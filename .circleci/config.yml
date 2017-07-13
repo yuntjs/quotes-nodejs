@@ -18,26 +18,34 @@ jobs:
 
     steps:
       - checkout
+
+      - type: cache-restore
+        key: dependencies-{{ checksum "package.json" }}
+
       - run:
-          name: Install ansible
+          name: Install npm dependencies
           command: |
             ./bootstrap.sh
 
+      - type: cache-save
+        key: dependencies-{{ checksum "package.json" }}
+        paths:
+          - node_modules
       # Download and cache dependencies
       - run:
           name: Test with mocha
           command: mocha test
 
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      # - restore_cache:
+      #     keys:
+      #     - v1-dependencies-{{ checksum "package.json" }}
+      #     # fallback to using the latest cache if no exact match is found
+      #     - v1-dependencies-
+      #
+      # - save_cache:
+      #     paths:
+      #       - node_modules
+      #     key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
 
