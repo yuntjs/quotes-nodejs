@@ -1,7 +1,6 @@
 #!/bin/sh
-
-sudo apt-get -y install software-properties-common
-sudo apt-get -y install python-boto
-sudo apt-add-repository -y ppa:ansible/ansible
-sudo apt-get -y update
-sudo apt-get -y install ansible
+sudo npm install express --save
+sudo npm install body-parser --save
+sudo npm install should sinon --save
+sudo npm install mocha --save -g
+sudo npm install

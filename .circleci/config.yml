@@ -23,10 +23,6 @@ jobs:
           command: |
             ./bootstrap.sh
 
-      - run:
-          name: Install dependencies
-          command: ansible-playbook ans-nodejs.yml
-
       # Download and cache dependencies
       - restore_cache:
           keys:
