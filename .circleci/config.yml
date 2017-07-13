@@ -21,7 +21,7 @@ jobs:
       - run:
           name: Install ansible
           command: |
-            ../bootstrap.sh
+            ./bootstrap.sh
 
       - run:
           name: Install dependencies
@@ -62,4 +62,4 @@ jobs:
           docker push taejunyun/quotesnodejs:$TAG
 
       - run: |
-          ../deploy.sh
+          ./deploy.sh
