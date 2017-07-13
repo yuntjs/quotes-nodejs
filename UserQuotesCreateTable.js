@@ -1,8 +1,12 @@
 var AWS = require("aws-sdk");
+var https = require('https');
+var agent = new https.Agent({
+   maxSockets: 25
+});
 
 AWS.config.update({
   region: "us-east-2",
-  endpoint: "http://localhost:3500"
+  endpoint: "http://localhost:8000"
 });
 
 var dynamodb = new AWS.DynamoDB();
@@ -10,7 +14,7 @@ var dynamodb = new AWS.DynamoDB();
 var params = {
     TableName : "User-Quotes",
     KeySchema: [
-        { AttributeName: "content", KeyType: "RANGE"},  //Partition key
+        { AttributeName: "content", KeyType: "HASH"},  //Partition key
         { AttributeName: "author", KeyType: "RANGE" }  //Sort key
     ],
     AttributeDefinitions: [

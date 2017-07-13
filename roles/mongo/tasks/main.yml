@@ -1,0 +1,6 @@
+---
+- name: Install mongo
+  command: npm install mongodb --save
+
+- name: Install mongoose
+  command: npm install mongoose --save

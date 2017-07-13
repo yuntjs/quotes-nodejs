@@ -4,7 +4,8 @@
   "description": "User interface for quotes",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/yuntjs/quotes-nodejs/issues"
   },
-  "homepage": "https://github.com/yuntjs/quotes-nodejs#readme"
+  "homepage": "https://github.com/yuntjs/quotes-nodejs#readme",
+  "dependencies": {
+    "aws-sdk": "^2.83.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "gulp-nodemon": "^2.2.1",
+    "mocha": "^3.4.2",
+    "mongodb": "^2.2.30",
+    "mongoose": "^4.11.1",
+    "should": "^11.2.1",
+    "sinon": "^2.3.7"
+  }
 }

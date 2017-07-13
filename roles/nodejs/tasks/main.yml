@@ -1,3 +1,21 @@
 ---
 - name: Install from ansible galaxy
   command: npm install aws-sdk --save
+
+- name: Install express
+  command: npm install express --save
+
+- name: Install gulp
+  command: npm install gulp --save -g
+
+- name: Install nodemon
+  command: npm install gulp-nodemon --save
+
+- name: Install body parser
+  command: npm install body-parser --save
+
+- name: npm install mocha, should and sinon
+  command: npm install mocha should sinon --save
+
+- name: npm install
+  command: npm install
