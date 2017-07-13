@@ -20,5 +20,8 @@
 - name: Install mocha
   command: npm install mocha --save -g
 
+- name: Install cors
+  command: npm install cors --save
+
 - name: npm install
   command: npm install
